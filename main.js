@@ -17,7 +17,7 @@ const port = 4444;
 app.post("/insert-documents", (req, res) => {
     async.waterfall([
             function (callback) {
-                let filePath = "../web-project/data-sheet.csv";
+                let filePath = "./data-sheet.csv";
                 if (!fs.existsSync(filePath)) {
                     console.log("Error file path does not exists");
                     callback(true, {
